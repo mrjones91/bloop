@@ -29,7 +29,7 @@ class Main extends React.Component {
   }
 
   getData = async (e) => {
-    const API = `http://localhost:3001/beasts?horns=${e.target.value}`;
+    const API = `https://backend-beasts.netlify.app/.netlify/functions/api/beasts?horns=${e.target.value}`;
     try {
       let response = await axios.get(API).then((res) => {
         console.log(res);
@@ -42,7 +42,7 @@ class Main extends React.Component {
   }
 
   postData = async () => {
-    const API = `http://localhost:3001/beasts`
+    const API = `https://backend-beasts.netlify.app/.netlify/functions/api/beasts`
     let bodyObj = {
       "title": this.state.jared,
       "description": "Data POSTed from FrontEnd",
