@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch index",
-    "notes": "echo insert notes"
+    "notes": "echo insert notes",
+    "start": "netlify-lambda serve src",
+    "build": "netlify-lambda build src"
   },
   "author": "dij",
   "license": "ISC",
@@ -22,6 +23,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   }
 }
